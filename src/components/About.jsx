@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const valuePoints = [
  
@@ -39,12 +40,14 @@ const About = () => (
         <p className="text-gray-600">
           Whether you need a robust booking platform, a stunning website, or a custom app, we’re here to help you succeed. Thank you for choosing BookingHub as your digital partner!
         </p>
-        <button
-          className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
-          onClick={() => window.location.href = '/contact'}
-        >
-          Contact Us
-        </button>
+        <Link to="/contact">
+          <button
+            className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          >
+            Contact Us
+          </button>
+       
+        </Link>
       </div>
       {/* Network Section */}
       <div className="md:w-1/2 bg-white rounded-lg shadow p-6">
@@ -66,6 +69,7 @@ const About = () => (
               <p className="text-gray-600 text-xs">{item.description}</p>
             </div>
           ))}
+          
         </div>
       </div>
     </div>

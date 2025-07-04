@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link, useLocation } from 'react-router-dom';
+
 
 const features = [
   {
@@ -82,11 +84,12 @@ const Home = () => {
   return (
     <div className="bg-blue-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       {/* Hero Section */}
-      <motion.div
-        className="text-center mb-12 bg-cover bg-center bg-no-repeat rounded-lg py-33 px-17"
-        style={{ backgroundImage: `url(${heroBackground})` }}
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
+      <Link to="/about">
+        <motion.div
+          className="text-center mb-12 bg-cover bg-center bg-no-repeat rounded-lg py-33 px-17"
+          style={{ backgroundImage: `url(${heroBackground})` }}
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
         <h1 className="text-4xl font-extrabold text-white sm:text-5xl">
@@ -97,11 +100,12 @@ const Home = () => {
         </p>
         <button
           className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
-          onClick={() => window.location.href = '/about'}
+        
         >
-          Learn More about Us
+          click here to learn more about Us
         </button>
       </motion.div>
+      </Link>
 
       {/* Cards Grid */}
       <motion.div

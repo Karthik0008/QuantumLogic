@@ -7,8 +7,11 @@ const countryCodes = [
   { code: '+91', label: 'India' },
   { code: '+61', label: 'Australia' },
   { code: '+81', label: 'Japan' },
-  // Add more countries as needed
-];
+  { code: '+49', label: 'Germany' },
+  { code: '+33', label: 'France' },
+  { code: '+39', label: 'Italy' },
+  { code: '+34', label: 'Spain' },
+  { code: '+55', label: 'Brazil' },];
 
 const requirementsOptions = [
   'HR Consulting',
